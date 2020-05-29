@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dr. Sara Mitchell</title>
+    <link href="https://fonts.googleapis.com/css?family=Open-Sans:300,400,500,700,800" rel="stylesheet">
+    <style>
+
+        body {
+            font-size: 16px;
+            color: #666;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+
+        h1 {
+
+            font-weight: 400;
+            color: #0B468D;
+            font-size: 2em;
+            margin: 1.6em 0 0.5em 0;
+        }
+
+        h2 {
+            font-weight: 400;
+            color: #5D91D0;
+            font-size: 1.5em;
+            padding: 1.25em 0 0.5em 0;
+        }
+
+        h3 {
+            font-weight: 400;
+            color: #666;
+            font-size: 1.2em;
+            margin: 1.5em 0 0.5em 0;
+        }
+
+        h4 {
+            color: #333;
+            font-weight: 400;
+            font-size: 1em;
+        }
+
+        td {
+            padding: 0.5em 0.5em;
+            vertical-align: top;
+        }
+
+        li {
+            padding: 6px 0;
+        }
+
+        hr {
+            margin: 2em 0 0 0;
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(60, 120, 191, 0) 0%, rgba(60, 120, 191, 1) 25%, rgba(60, 120, 191, 1) 75%, rgba(60, 120, 191, 0) 100%);
+            text-align: center;
+        }
+
+        .main {
+            padding: 1em 5em 5em 5em
+        }
+
+        /* Defining Header and content */
+
+        .header {
+            position: relative;
+            padding: 1em 1.5em 3em 0em;
+            text-align: left;
+            background: #3c77bf;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .avatar {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .avatar img {
+            width: 200px
+        }
+
+        .header .a {
+            display: inline-block;
+            width: 10%;
+            height: auto;
+            padding: 0em 5em;
+            vertical-align: center;
+            z-index: 1;
+        }
+
+        .header .b {
+            display: inline-block;
+            width: 50%;
+            height: auto;
+            padding: 0em 0em 0em 3em;
+            vertical-align: center;
+            z-index: 1;
+        }
+
+        .banner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            transform: scaleX(-1);
+            -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0));
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0));
+        }
+
+        /* Defining Navigation bar */
+        .nav {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            font-size: 0;
+        }
+
+        .nav a {
+            color: #506975;
+            font-size: 1.2em;
+            position: relative;
+            padding: 0.5em;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            font-size: 1rem;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .dropdown-btn .dropdown {
+            font-size: 1.2em;
+            padding: 0.5em;
+            text-align: left;
+            outline: none;
+            border: none;
+            margin: 0;
+        }
+
+        .nav a:hover, .dropdown:hover {
+            background-color: #3C78BF;
+            color: white;
+        }
+
+        .dropdown-container {
+            display: none;
+            position: absolute;
+            background-color: #3C78BF;
+            min-width: 190px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-top-right-radius: 0.5em;
+            border-bottom-left-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
+            overflow: hidden;
+        }
+
+        .dropdown-container a {
+            color: white;
+            padding: 0.5em;
+            text-align: left;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-container a:hover {
+            background-color: #5D91D0;
+        }
+
+        .dropdown:hover a {
+            color: white;
+        }
+        
+        .dropdown:hover .dropdown-container {
+            display: block;
+        }
+
+        .anchor::before {
+            content: "";
+            display: block;
+            height: 30px; /* fixed header height*/
+            margin: -50px 0 0; /* negative fixed header height */
+        }
+    </style>
+</head>
+<body>
+
+
+<div>
+    <a name="Home"></a>
+    <!--Header-->
+    <div class="header">
+        <img class="banner"
+             src="https://media.istockphoto.com/photos/top-view-image-of-working-table-with-accessories-putting-on-it-cup-picture-id1213244326"/>
+        <div class="a">
+            <div class="avatar">
+                <img src="SaraPhoto.jpg" alt="Dr. Sara Mitchell"/>
+            </div>
+        </div>
+
+        <div class="b">
+            <div>
+                <p style="font-size: 2.5em">Sara Mitchell</p>
+                <p>Postdoctoral Researcher</p>
+                <!--<p>Chair of Urban, Regional, and International Economics</p>-->
+                <p>Technical University Dortmund</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Navigation Bar-->
+    <div class="nav">
+        <div class="dropdown">
+            <a href="#Home">Home</a>
+        </div>
+        <div class="dropdown">
+            <a class="dropdown-btn">About
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-container">
+                <a href="#Experience">Experience</a>
+                <a href="#Education">Education</a>
+                <a href="#Other">Other Info</a>
+                <a href="#Contact">Contact</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a class="dropdown-btn">Research
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-container">
+                <a href="#Publications">Publications</a>
+                <a href="#Other Research">Other Research</a>
+                <a href="#Presentations">Presentations</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a class="dropdown-btn">Teaching
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-container">
+                <a href="#Teaching Philosophy">Teaching Philosophy</a>
+                <a href="#Teaching Interests">Teaching Interests</a>
+                <a href="#Courses">List of Courses Taught</a>
+                <a href="#Course Descriptions">Course Descriptions</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="main">
+
+    <p>I am an empirical economist with research interests in urban economics, labour economics, and economic history.
+        My research has touched on several subfields of economics, including migration, agglomeration of economics
+        activity, peer effects, knowledge spillovers. I use novel, historical datasets to study the migration and
+        geographic clustering of creative workers and to identify agglomeration effects associated with these creative
+        clusters. My most recent research has also used these historical data to study women's labour force
+        participation in creative industries.</p>
+    <p>I am currently a Postdoctoral Researcher at the Chair of Urban, Regional, and International Economics (URI)
+        at TU
+        Dortmund. I
+        received a PhD in Economics from Trinity College Dublin (Ireland). I
+        was one of the inaugural Grattan Scholars at Trinity College Dublin, and I was selected as an Irish Research
+        Council
+        Fellow at the 5th Lindau Nobel Laureate Meeting on Economic Sciences. I received my MSc in Economics and
+        MPhil
+        in
+        International Peace Studies from Trinity College Dublin (Ireland), and a BA in Economics from Hendrix
+        College
+        (USA).
+    <p>I worked as a Research Associate for the Institute of Public Administration (IPA), a recognised college of
+        University College Dublin (UCD). In this position, I provided research,
+        analytical, and statistical assistance as part of an Independent Secretariat for the Expert Commission on
+        the
+        Domestic Public Water Services. I also worked as a Research Economist for Indecon Economic Consultants in
+        Dublin,
+        Ireland, where I contributed to a number of economic impact assessments, policy
+        reviews, and other assignments for various government departments and agencies.</p>
+
+    <p>Add a link to CV</p>
+
+    <hr>
+
+    <h1>About</h1>
+
+    <a class="anchor" name="Experience"><h2>Professional Experience</h2></a>
+    <table>
+        <tbody>
+        <tr>
+            <td>June 2018 - now</td>
+            <td><em>Postdoctoral Researcher</em></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Chair of Urban, Regional, and International Economics</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Department of Economics, Technical University Dortmund</td>
+        </tr>
+        <tr>
+            <td>Jan. 2017 - June 2018</td>
+            <td><em>Research Economics</em></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Indecon Economic Consultants, Dublin</td>
+        </tr>
+        <tr>
+            <td>Aug. 2016 - June 2018</td>
+            <td><em>Research Associate</em></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Independent Secretariat for the Expert Commission on the Domestic Public Water Services</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>UCD Institute of Public Administration</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <a class="anchor" name="Education"><h2>Education</h2></a>
+    <table>
+        <tbody>
+        <tr>
+            <td>2012-2016</td>
+            <td><em>PhD in Economics</em></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Thesis Title: <em>Essays on Agglomeration Economies in Literature</em></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Committee: Prof. John O'Hagan (Supervisor); Dr. Martina Kirchberger (Internal Examiner); Prof. John
+                McHale (External Examiner)
+            </td>
+        </tr>
+        <tr>
+            <td>2011-2012</td>
+            <td><em>MSc in Economics</em></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Department of Economics</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Trinity College Dublin</td>
+        </tr>
+        <tr>
+            <td>2010-2011</td>
+            <td><em>MPhil in International Peace Studies</em></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Irish School of Ecumenics</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Trinity College Dublin</td>
+        </tr>
+        <tr>
+            <td>2006-2010</td>
+            <td><em>BA in Economics</em></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Department of Economics and Business</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Hendrix College</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>ISEP Semester Exchange Programme 2009, Växjö University (Sweden)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Summer Exchange Programme 2008, Akita International University (Japan)</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <a class="anchor" name="Other"><h2>Other Information</h2></a>
+
+    <table>
+        <tbody>
+        <tr>
+            <td>
+                Affiliations:
+            </td>
+            <td>
+                European Economic Association, Urban Economics Association, Economic History Association, Economic
+                History Society, Association for Cultural Economics International
+            </td>
+        </tr>
+        <tr>
+            <td>Software:</td>
+            <td>STATA, R, LaTeX, Markdown, HTML, CSS</td>
+        </tr>
+        <tr>
+            <td>Languages:</td>
+            <td>English (native), Portuguese (upper intermediate), German (basic)</td>
+        </tr>
+        <tr>
+            <td>Find Me:</td>
+            <td><a href="https://www.wiwi2.tu-dortmund.de/wiwi/uri/de/forschung/Research-Team/index.html">TU Dortmund
+                Website</a>, <a href="https://ideas.repec.org/f/pmi779.html"> RePeC Author Page</a>, <a href="https://orcid.org/0000-0002-7544-2263
+">ORCiD</a>, <a href="https://www.linkedin.com/in/sara-mitchell-056a7033/">LinkedIn</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <a class="anchor" name="Contact"><h2>Contact</h2></a>
+    <table>
+        <tbody>
+        <tr>
+            <td>Email</td>
+            <td>sara.mitchell@tu-dortmund.de</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>+49 231 755 8017</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>Technische Universität Dortmund
+                <p>Fakultät Wirtschaftswissenschaften</p>
+                <p>Volkswirtschaftslehre (Urbane, Regionale und Internationale Wirtschaftsbeziehungen)</p>
+                <p>D-44221 Dortmund</p>
+                <p>Deutschland</p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h1>Research</h1>
+
+    <a class="anchor" name="Publications"><h2>Publications</h2>
+        <h4><a href="https://doi.org/10.1016/j.jue.2019.05.002">London calling? Agglomeration economies in literature
+            since 1700</a>. Journal of Urban Economics, 2019</h4>
+        <p>This paper utilises a unique, purpose-built panel dataset on prominent authors in the UK and Ireland born
+            1700–1925 to estimate the productivity gains associated with agglomeration of an industry with few capital
+            requirements and no apparent need to cluster geographically. I find the average author experiences
+            productivity gains of 11.94% per annum when residing in London, the only major literary cluster – a gain not
+            associated with living in any of the minor literary clusters. I find evidence of negative selection with
+            respect to productivity, indicating the results are not driven by the self-selection of highly productive
+            authors to London. I find heterogeneity of returns to living in London by birth cohort and Impact Index
+            quartile (a measure of author quality) and that the cohorts who receive the greatest gains from locating in
+            London are those for which there is the strongest evidence of negative selection with respect to
+            productivity.</p>
+
+        <hr>
+
+        <a class="anchor" name="Other Research"><h2>Other Research</h2>
+            <h4>
+                Disentangling the effects of input sharing and knowledge spillovers in literary production. <em>Working
+                paper</em>
+            </h4>
+            <p>
+                This paper explores the ‘black box’ of agglomeration effects provides evidence of potential channels
+                through which these gains occur in the context of literary production. In particular, this paper
+                attempts to disentangle the effects of knowledge spillovers (proxied by characteristics of co-located
+                social connections) and input sharing (proxied by characteristics of co-located but not
+                socially-connected authors). This study utilises a unique dataset with information on 370 prominent
+                authors in the UK and Ireland born 1700–1925. This paper constructs age-productivity profiles to
+                determine the productivity gains associated with knowledge spillovers and input sharing. Individual
+                fixed effects are used to control for spatial and group sorting. Input sharing of London-based authors
+                affects own-productivity positively through output and negatively through quality. There is evidence
+                knowledge spillovers when authors live elsewhere, as the output of co-located social connections has a
+                positive effect on own-author productivity.
+            </p>
+
+            <h4>
+                The origins of urban clusters in German literature (with Lukas Kuld) <em>In progress</em>
+            </h4>
+            <p>
+                Large cities and clusters of workers are widely understood to be key factors in creative production. In
+                this paper, we trace their empirical beginnings in the location choices made by German literary writers.
+                We study yearly data on all 149 writers listed in the Encyclopædia Britannica as German and born between
+                1700 and 1899. This time frame includes major economic and political changes, such as the introduction
+                of copyright. Writers mirror these changes in their mobility, location, and clustering choices. By the
+                end of the 19th Century writers show a strong convergence into few large cities during early adulthood,
+                which is not observed for earlier cohorts, and show typical modern life-cycle migration.
+            </p>
+
+            <h4>
+                Making the list: Gender representation in literature (with Lukas Kuld) <em>In progress</em>
+            </h4>
+            <p>
+                Looking at two hundred years of American literature, we compare female participation across different
+                types of literature, success criteria, and data sources. Two key observations emerge. First, during the
+                Twentieth Century, female writers hve a much higher representation in bestselling lists, at almost
+                parity with male writers, than in literary cannons by present-day critics. Second, and similar to other
+                socio-economic measures, we see a marked decrease in bestselling books by women during the mid-Twentieth
+                Century. The same decrease is not observed for commercially less successful and for critically acclaimed
+                publications. This might indicate an increasingly difficult market for female writers but also
+                represents a convergence of gender roles for commercially and critically successful publications. In
+                addition, by including a large range of data sources and metrics, we should how methodological choices
+                can affect estimates on gender representation in the arts.
+            </p>
+
+            <h4>
+                Toni Morrison and American literature: Determinants of female literary creativity (with Christiane
+                Hellmanzik and Lukas Kuld) <em>In progress</em>
+            </h4>
+            <p>
+                This paper investigates differences between female and male productivity in literary production using a
+                novel dataset of eminent American writers of the 18th, 19th, and 20th centuries. Using yearly data on
+                publications, critical acclaim information, as well as market success data and residency of 472 American
+                writers, we show that differences between male and female literary productivity were not as large as
+                expected and that career profiles over time are relatively similar when controlling for other factors.
+                This is different from what we observe in other occupations, historically and contemporaneously.
+                Moreover, we use information on trading laws in the US and exploit variation between states to test
+                whether control and ownership over their works impacted female literary careers. Preliminary evidence
+                suggests that this is indeed the case. One explanation is that economic incentives granted through legal
+                autonomy spur women on to engage in creative activity.
+            </p>
+
+            <hr>
+
+            <a class="anchor" name="Presentations"><h2>Research Presentations</h2></a>
+            <table>
+                <tbody>
+                <tr>
+                    <td>Annual Meeting of the Southern Economics Association/North American Cultural Economics
+                        Workshop
+                    </td>
+                    <td>November 2019</td>
+                    <td>Fort Lauderdale (FL), USA</td>
+                </tr>
+                <tr>
+                    <td>European Workshop on Applied Cultural Economics</td>
+                    <td>September 2019</td>
+                    <td>Copenhagen, Denmark</td>
+                </tr>
+                <tr>
+                    <td>International Conference on Computational and Methodological Statistics (CFE-CMStatistics)</td>
+                    <td>December 2018</td>
+                    <td>Pisa, Italy</td>
+                </tr>
+                <td>Irish Quantitative History Annual Meeting</td>
+                <td>January 2016</td>
+                <td>Dublin, Ireland</td>
+                </tr>
+                <tr>
+                    <td>European Workshop on Applied Cultural Economics</td>
+                    <td>September 2015</td>
+                    <td>Vienna, Austria</td>
+                </tr>
+                <tr>
+                    <td>World Economic History Congress</td>
+                    <td>August 2015</td>
+                    <td>Kyoto, Japan</td>
+                </tr>
+                <tr>
+                    <td>Creative Networks and Cultural Output Workshop (Co-Organised with TCD School of English)
+                    </td>
+                    <td>June 2015</td>
+                    <td>Dublin, Ireland</td>
+                </tr>
+                <tr>
+                    <td>Irish Economic Association Annual Conference</td>
+                    <td>May 2015</td>
+                    <td>Dublin, Ireland</td>
+                </tr>
+                <tr>
+                    <td>PUCK Project (Participation University City Kulture) Workshop</td>
+                    <td>January 2014</td>
+                    <td>Bilbao, Spain</td>
+                </tr>
+                <tr>
+                    <td>European Workshop on Applied Cultural Economics</td>
+                    <td>September 2013</td>
+                    <td>Ljubljana, Slovenia</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <h1>Teaching</h1>
+
+            <a class="anchor" name="Teaching Philosophy"><h2>Teaching Philosophy</h2></a>
+
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor
+                quam,
+                feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+                Aenean
+                ultricies
+                mi vitae est. Mauris placerat eleifend leo.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor
+                quam,
+                feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+                Aenean
+                ultricies
+                mi vitae est. Mauris placerat eleifend leo.ultricies eget, tempor sit amet, ante. Donec eu libero sit
+                amet
+                quam
+                egestas semper. Aenean ultricies
+                mi vitae est. Mauris placerat eleifend leo.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor
+                quam,
+                feugiat vitae, ultricies eget, tempor sit ultricies eget, tempor sit amet, ante. Donec eu libero sit
+                amet
+                quam
+                egestas semper. Aenean ultricies
+                mi vitae est. Mauris placerat eleifend leo..</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor
+                quam,
+                feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+                Aenean
+                ultricies
+                mi vitae est. Mauris placerat eleifend leo ultricies eget, tempor sit amet, ante. Donec eu libero sit
+                amet
+                quam
+                egestas semper. Aenean ultricies
+                mi vitae est. Mauris placerat eleifend leo itant morbi tristique senectus et netus et malesuada fames ac
+                turpis
+                egestas. Vestibulum tortor quam,
+                feugiat vitae, ultricies eget, tempor.</p>
+            <p>ADD COPY OF NOMINATION FOR TEACHING AWARD</p>
+
+            <h3>Thesis Supervision</h3></a>
+        <p><b>Bachelor students:</b> Economics (4)</p>
+        <p><b>Masters students:</b> Economics (4); Business Mathematics (1)</p>
+
+        <hr>
+
+        <a class="anchor" name="Teaching Interests"><h2>Teaching Interests</h2></a>
+
+        <h3>Urban Economics</h3>
+        <p>Course level: Bachelor or masters</p>
+        <p>Course description: In this course, we will pose and answer urban economics questions, such as why do cities
+            exist? Why firms cluster? What determines city size and urban growth? We will then use economic theory to
+            analyse the location choice of individuals and firms and to analyse the geography of education, employment,
+            housing, transportation, poverty, and crime.</p>
+        <p>Core teaching elements: Lectures and exam (bachelor-level) or research papers with presentations
+            (master-level)</p>
+        <p>Recommended reading:</p>
+        <ul>
+            <li>
+                <em>Urban Economics</em> by Arthur O'Sullivan
+            </li>
+            <li>
+                <em>Lectures on Urban Economics</em> by Jan K. Brueckner
+            </li>
+            <li>
+                <em>The Triumph of the City</em> by Edward Glaeser
+            </li>
+            <li>
+                <em>Handbook of Urban and Regional Economics</em> edited by Gilles Duranton, Vernon Henderson, and
+                William Strange and other academic journal articles
+            </li>
+            <li>
+                Relevant news articles, podcasts and other sources
+            </li>
+        </ul>
+
+
+        <h3>Economics of European Integration</h3>
+        <p>Course level: Bachelor or masters</p>
+        <p>Course description: This course covers the microeconomics and macroeconomics the EU integration process from
+            the post-war period to present day. We will discuss the phases of trade integration leading to the
+            establishment of a single market, the geography of inequality and regional disparities and patterns of
+            migration, the evolution of CAP and EU Regional Policy, theory of optimal currency areas, evolution of
+            monetary policy and the euro, and the impact of the financial crisis, Brexit, and COVID-19.</p>
+        <p>Core teaching elements: Lectures, research paper with presentation</p>
+        <p>Recommended reading:</p>
+        <ul>
+            <li>
+                <em>The Economics of European Integration</em> by Charles Wyplosz and Richard E. Baldwin
+            </li>
+        </ul>
+
+        <h3>Economics of Art and Culture</h3>
+        <p>Course level: Masters</p>
+        <p>Course description: In this course, students will learn how to use tools of economics to interpret and
+            understand cultural phenomena, identify cultural agents and their activities, and the understand
+            relationship between culture and economics particularly in the context of the \textit{creative economy}.
+            This course will cover topics such as: agents and pricing, demand for culture, the economics of creativity,
+            cultural heritage and tourism, cultural policy (public funding of arts and culture, the economic impact of
+            the arts), the impact of digitisation of cultural goods.</p>
+        <p>Core teaching elements: Lectures, research paper with presentation
+        </p>
+        <p>Recommended reading:</p>
+        <ul>
+            <li>
+                <em>Economics of Culture</em> by David Throsby
+            </li>
+            <li>
+                <em>Advanced Introduction to Cultural Economics</em> by Ruth Towse
+            </li>
+            <li>
+                <em>Cultural Economics</em> by Christiane Hellmanzik
+            </li>
+            <li>
+                <em>Handbook of Cultural Economics</em> by edited by Ruth Towse and Trilce Navarrete Hernández
+            </li>
+            <li>
+                <em>Rockonomics: A Backstage Tour of What the Music Industry Can Teach Us About Economics and Life</em>
+                by Alan Krueger
+            </li>
+        </ul>
+
+        <h3>Economic History of Knowledge and Ideas</h3>
+        <p>Course level: PhD</p>
+        <p>Course description: A number of innovations and circumstances throughout history have had major influence on
+            the stock of knowledge, idea creation, human capital formation, and innovation. This course examines
+            economic research about these phenomena, such as the introduction of the printing press, the Age of
+            Enlightenment, the introduction of copyright, and conflict. Through this course, students will learn how to
+            conduct economic history research, how to address various challenges in collecting historical data, and will
+            understand various identification strategies used in historical contexts.</p>
+        <p>Core teaching elements: Lectures on research papers, referee report</p>
+        <p>Recommended reading:</p>
+        <ul>
+            <li>
+                Dittmar, J. E. (2011). Information technology and economic change: the impact of the printing press. The
+                Quarterly Journal of Economics, 126(3), 1133-1172.
+            </li>
+            <li>
+                Squicciarini, M. P., and Voigtländer, N. (2015). Human capital and industrialization: Evidence from the
+                age of enlightenment. The Quarterly Journal of Economics, 130(4), 1825-1883.
+            </li>
+            <li>
+                Cagé, J., and Rueda, V. 2016. "The Long-Term Effects of the Printing Press in Sub-Saharan Africa."
+                American Economic Journal: Applied Economics, 8 (3): 69-99.
+            </li>
+            <li>
+                Waldinger, F. (2016). Bombs, brains, and science: The role of human and physical capital for the
+                creation of scientific knowledge. Review of Economics and Statistics, 98(5), 811-831.
+            </li>
+            <li>
+                Hanlon, W. W. (2015). Necessity is the mother of invention: Input supplies and Directed Technical
+                Change. Econometrica, 83(1), 67-100.
+            </li>
+            <li>
+                Giorcelli, M., and Moser, P. (2019). Copyrights and creativity: Evidence from Italian operas. Available
+                at SSRN 2505776.
+            </li>
+        </ul>
+
+        <hr>
+
+        <a class="anchor" name="Courses"><h2>List of Courses Taught</h2></a>
+
+        <table style="width: 100%; border: none;">
+            <tbody>
+            <tr>
+                <td>Spring 2020</td>
+                <td>Lecturer</td>
+                <td>Economics of Brexit</td>
+                <td>TU Dortmund Department of Economics / School of Spatial Planning</td>
+            </tr>
+            <tr>
+                <td>Spring 2019 & 2020</td>
+                <td>Lecturer</td>
+                <td>Academic Writing</td>
+                <td>TU Dortmund Department of Economics / SPRING Masters Programme</td>
+            </tr>
+            <tr>
+                <td>Spring 2019 & 2020</td>
+                <td>Teaching Assistant</td>
+                <td>Human Capital and the Knowledge Economy</td>
+                <td>TU Dortmund Department of Economics</td>
+            </tr>
+            <tr>
+                <td>Winter Term 2018 & 2019</td>
+                <td>Lecturer</td>
+                <td>Economics of Migration</td>
+                <td>TU Dortmund Department of Economics / School of Spatial Planning</td>
+            </tr>
+            <tr>
+                <td>Spring Term 2019</td>
+                <td>Lecturer</td>
+                <td>Advanced Urban Economics</td>
+                <td>TU Dortmund School of Spatial Planning</td>
+            </tr>
+            <tr>
+                <td>Autumn Term 2015</td>
+                <td>Teaching Assistant</td>
+                <td>Intermediate Microeconomics</td>
+                <td>TCD Department of Economics</td>
+            </tr>
+            <tr>
+                <td>Spring Term 2015</td>
+                <td>Lecturer</td>
+                <td>Economic and Policy Analysis II</td>
+                <td>TCD/UCD Joint Masters in Development Practice</td>
+            </tr>
+            <tr>
+                <td>Spring Term 2014</td>
+                <td>Teaching Assistant</td>
+                <td>Economic and Policy Analysis II</td>
+                <td>TCD/UCD Joint Masters in Development Practice</td>
+            </tr>
+            <tr>
+                <td>Autumn Term 2013-2016</td>
+                <td>Lecturer</td>
+                <td>Mathematics and Statistics</td>
+                <td>TCD Department of Economics</td>
+            </tr>
+            <tr>
+                <td>Autumn 2012 & Spring 2013</td>
+                <td>Teaching Assistant</td>
+                <td>Mathematics and Statistics</td>
+                <td>TCD Department of Economics</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <a class="anchor" name="Course Descriptions"><h2>Selected Course Descriptions</h2></a>
+
+        <h3>Economics of Migration</h3>
+        <p>I lectured the Economics of Migration seminar offered by the Chair of Urban, Regional, and International
+            Economics at
+            TU Dortmund in Autumn 2018 and Autumn 2019. This seminar was taught to 25-30 final year bachelor students
+            and masters
+            students
+            in
+            the
+            Department of Economics and the Department of Spatial Planning. The seminar was also open to students from
+            several
+            other faculties, such as industrial engineering and computer science. </p>
+        <p>The aim of this seminar was to explore the causes and effects of migration from a microeconomic and
+            macroeconomic
+            perspective and evaluate current economic policy debates from a scientific perspective. The Economics of
+            Migration
+            seminar
+            lectures presented a series of economic research papers that broadly examine the following questions:</p>
+        <ul>
+            <li>Who migrates?</li>
+            <li>How do immigrants do in the labour market relative to natives?</li>
+            <li>What impact do immigrants have on natives (wages, innovation)?</li>
+        </ul>
+        <p> The rest of the seminar was designed to promote the discussion of scientific issues, active student
+            participation in discussions, and intensive self-study. Students were required to work in groups to select a
+            research topic
+            related to migration, conduct an empirical analysis, and present their findings through an oral presentation
+            and
+            written report.</p>
+        <p>Reading List:</p>
+        <ul>
+            <li>
+                Roy, A. D. (1951). Some thoughts on the distribution of earnings. Oxford economic papers, 3(2), 135-146.
+            </li>
+            <li>
+                Borjas, G. J. (1987). Self-selection and the earnings of immigrants (No. w2248). National Bureau of
+                Economic Research.
+            </li>
+            <li>
+                Chiquiar, D., & Hanson, G. H. (2005). International migration, self-selection, and the distribution of
+                wages: Evidence from Mexico and the United States. Journal of Political Economy, 113(2), 239-281.
+                Chicago
+            </li>
+            <li>
+                Moraga, J. F. H. (2011). New evidence on emigrant selection. The Review of Economics and Statistics,
+                93(1), 72-96.
+            </li>
+            <li>
+                Card, D., & DiNardo, J. (2000). Do immigrant inflows lead to native outflows?. American Economic Review,
+                90(2), 360-367.
+            </li>
+            <li>
+                Card, D. (1990). The impact of the Mariel boatlift on the Miami labor market. ILR Review, 43(2),
+                245-257.
+                Chicago
+            </li>
+            <li>
+                Angrist, J. D., & Krueger, A. B. (1999). Empirical strategies in labor economics. In Handbook of labor
+                economics (Vol. 3, pp. 1277-1366). Elsevier.
+            </li>
+            <li>
+                Friedberg, R. M. (2001). The impact of mass migration on the Israeli labor market. The Quarterly Journal
+                of Economics, 116(4), 1373-1408.
+                Chicago
+            </li>
+            <li>
+                Borjas, G. J. (2003). The labor demand curve is downward sloping: Reexamining the impact of immigration
+                on the labor market. The quarterly journal of economics, 118(4), 1335-1374. Chicago
+            </li>
+            <li>
+                Moser, P., Voena, A., & Waldinger, F. (2014). German Jewish émigrés and US invention. American Economic
+                Review, 104(10), 3222-55. Chicago
+            </li>
+        </ul>
+
+        <h3>Academic Writing</h3>
+        <p>I lectured the Academic Writing course offered by the Chair of Urban, Regional, and International
+            Economics at
+            TU Dortmund in Spring 2019. This course is taught to a small group of no more than 20 students. The course
+            was open to students
+            participating in
+            the SPRING Masters Programme offered by the Department of Spatial Planning, and it was also open to bachelor
+            students
+            participating in the Digitalisation seminar (offered at the URI chair) who needed to fulfil their Modul 11:
+            Wissenschafliches Arbeiten requirement.</p>
+        <p>During this course, students learn how to:</p>
+        <ul>
+            <li> Structure ideas in academic writing: academic writing as ‘storytelling’
+            </li>
+            <li>
+                Understand the various types of writing and how this affects style, vocabulary and content
+            </li>
+            <li>
+                Discuss research in appropriate language for various audiences (scholarly and general)
+            </li>
+            <li>
+                Critique academic writing and how to respond to academic criticism (providing suggestions, accepting
+                suggestions, defending decisions)
+            </li>
+            <li>
+                Present qualitative and quantitative analyses in a way that is meaningful and accessible
+            </li>
+            <li>
+                Writing concisely, accurately, and accessibly to communicate complex ideas
+            </li>
+        </ul>
+        <p>Relevant high-quality sources on academic citations/referencing, writing style guides, guides to presenting
+            statistics, etc. are provided.</p>
+        <p>Recommended reading and other material:</p>
+        <ul>
+            <li>
+                Online Writing Lab at Purdue University
+            </li>
+            <li>
+                The Introduction Formula by Keith Head
+            </li>
+            <li>
+                The Conclusion Formula by Marc F. Bellemare
+            </li>
+            <li>
+                How to give an applied micro talk by Jesse M. Shapiro
+            </li>
+            <li>
+                Practical tips for writing and publishing applied economics papers by Timothy Beatty and Jay P.
+                Shimshack
+            </li>
+            <li>
+                UNECE "Making Data Meaningful" Series
+            </li>
+            <li>
+                The Craft of Writing Effectively by Larry McEnerney
+            </li>
+        </ul>
+
+
+        <h3>Mathematics and Statistics</h3>
+        <p>I lectured the Mathematics section of the Mathematics and Statistics module offered by the Department of
+            Economics in
+            Trinity
+            College Dublin in Autumn 2013, Autumn 2014, and Spring 2016. The module was taught to 375-400 first year
+            bachelor
+            students studying business,
+            economics, and other social sciences in the School of Social Sciences and Philosophy. The 2 weekly lectures
+            were
+            supplemented with weekly tutorials (~20 students per tutorial) taught by 4-5 teaching assistants.</p>
+        <p>The content of the mathematics section of the module included:</p>
+        <ul>
+            <li>Linear and quadratic functions</li>
+            <li>Indices and logarithms</li>
+            <li>Matrices</li>
+            <li>Differentiation</li>
+            <li>Optimisation of functions of one variable</li>
+            <li>Partial differentiation</li>
+            <li>Constrained and unconstrained optimisation of functions of several variables</li>
+            <li>Basic integration</li>
+        </ul>
+        <p>The main text for this course was <em>Mathematics for Economics and Business</em> by Ian Jacques (Pearson).
+            This textboox comes with a variety of online resources, including quizzes, that were used throughout the
+            module.</p>
+
+</div>
+<script type="text/javascript">
+    window.onscroll = function () {
+        myFunction()
+    };
+
+    // Get the navbar
+    var navbar = document.querySelector(".nav");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.style.position = 'fixed';
+        } else {
+            navbar.style.position = 'relative';
+        }
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+

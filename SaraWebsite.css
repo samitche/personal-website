@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<css lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dr. Sara Mitchell</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700,800" rel="stylesheet">
+<style>
+body {
+font-size: 16px;
+color: #666;
+font-family: 'Lato', sans-serif;
+font-weight: 300;
+background-color: #f5f5f5;
+margin: 0;
+}
+
+h1 {
+
+    font-weight: 400;
+    color: #009197;
+    font-size: 2em;
+    margin: 1.6em 0 1em 0;
+}
+
+h2 {
+    font-weight: 400;
+    color: #666;
+    font-size: 1.5em;
+    padding: 1.25em 0 0.5em 0;
+}
+
+h3 {
+    font-weight: 400;
+    color: #006064;
+    font-size: 1.2em;
+    margin: 1.5em 0 0.5em 0;
+}
+
+h4 {
+    color: #333;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+td {
+    padding: 0.5em 0.5em;
+    vertical-align: top;
+}
+
+li {
+    padding: 6px 0;
+}
+
+.main {
+    padding: 0em 5em
+}
+
+/* Defining Header and content */
+
+.header {
+    padding: 1em 1.5em 3em 0em;
+    text-align: left;
+    background: #f87639;
+    color: white;
+    font-size: 1.2em;
+}
+
+.avatar {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 200px
+}
+
+span.a {
+    display: inline-block;
+    width: 10%;
+    height: auto;
+    padding: 0em 5em 0em 5em;
+    vertical-align: center;
+}
+
+span.b {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    padding: 0em 0em 0em 3em;
+    vertical-align: center;
+}
+
+span.c {
+    display: inline-block;
+    width: 10%;
+    height: auto;
+    float: right;
+    vertical-align: center;
+}
+
+/* Defining Navigation bar */
+.nav {
+    background-color: white;
+    overflow: hidden;
+}
+
+.nav a {
+    color: #006064;
+    font-size: 1.2em;
+    position: relative;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dropdown {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.dropdown-btn .dropdown {
+    font-size: 1.2em;
+    padding: 0.5em;
+    text-align: left;
+    outline: none;
+    border: none;
+    margin: 0;
+}
+
+.nav a:hover, .dropdown:hover {
+    background-color: #00a9b1;
+    color: white;
+}
+
+.dropdown-container {
+    display: none;
+    position: absolute;
+    background-color: #00a9b1;
+    min-width: 190px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-container a {
+    color: white;
+    padding: 0.5em;
+    text-align: left;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-container a:hover {
+    background-color: #009197;
+}
+
+.dropdown:hover .dropdown-container {
+    display: block;
+}
+
+/* Customising the CV timeline*/
+{
+    box-sizing: border-box
+;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #F98752;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: 2px;
+}
+
+/* Container around content */
+.container {
+    position: relative;
+    background-color: inherit;
+    width: 40%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -15px;
+    background-color: #F98752;
+    border: 2px solid white;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 3.5em;
+}
+
+/* Place the container to the right */
+.right {
+    left: 55%;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -65px;
+}
+
+/* The actual content */
+.content {
+    padding: 1em 1.5em;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.myBtn {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #006064;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.myBtn:hover {
+    background-color: #f87639;
+}
+</style>
+  </head>
+      </html>
