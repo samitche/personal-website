@@ -186,3 +186,9 @@ hr {
   height: 30px; /* fixed header height*/
   margin: -50px 0 0; /* negative fixed header height */
 }
+
+.width-wrap {
+  max-width: 1440px;
+  margin: auto;
+  overflow: auto;
+}
