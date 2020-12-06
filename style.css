@@ -192,3 +192,34 @@ hr {
   margin: auto;
   overflow: auto;
 }
+
+/* ADDING IMAGE GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.gallery .photo {
+  margin: 1em;
+  border: 1px solid #ddd;
+}
+
+.gallery .photo:hover {
+  border: 1px solid #3c78bf;
+}
+
+.gallery .photo img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery .photo .desc {
+  padding: 0.5em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: 50% 50%;
+  }
+}
