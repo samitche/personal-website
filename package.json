@@ -24,7 +24,7 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "express": "^4.15.5",
+    "express": "^4.17.3",
     "express-prometheus-middleware": "^0.8.4"
   }
 }
